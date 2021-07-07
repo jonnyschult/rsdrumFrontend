@@ -1,0 +1,159 @@
+@import '../../variables.scss';
+
+.spinner {
+  color: $secondary-color;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.lesson {
+  display: flex;
+  position: relative;
+}
+
+.linkDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkDiv:hover {
+  cursor: pointer;
+}
+
+.linkDiv:hover .lessonImg {
+  filter: blur(0) brightness(0.7);
+}
+
+.hidden {
+  display: none;
+  transition: ease 1s;
+}
+
+.linkItem {
+  display: block !important;
+}
+
+.lesson h5 {
+  position: relative;
+  z-index: 1;
+}
+
+.lessonImg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(2px) brightness(0.3);
+  transition: ease-in 0.15s;
+}
+
+.lessonImg:hover {
+  filter: blur(0) brightness(0.7);
+}
+
+@include media('<small') {
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 15em;
+    width: 100%;
+  }
+
+  .lesson h5 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .lesson h6 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 20em;
+    width: 90%;
+    margin: 1em 0;
+  }
+
+  .lesson h5 {
+    position: relative;
+    z-index: 1;
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+
+  .lesson h6 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 20em;
+    width: 45%;
+    margin: 1em 0;
+  }
+
+  .lesson h5 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .lesson h6 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+@include media('>large') {
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 20em;
+    width: 23%;
+    margin: 1em 0.5em;
+  }
+
+  .lesson h5 {
+    position: relative;
+    z-index: 1;
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+
+  .lesson h6 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+  }
+}

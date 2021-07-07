@@ -1,0 +1,428 @@
+@import '../../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loadingMain {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+}
+
+.spinnerMain {
+  color: $secondary-color;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+  opacity: 0;
+  -webkit-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+}
+
+.wrapper h3 {
+  font-family: $decorative;
+  margin-bottom: 2em;
+}
+
+.checkoutContainer h5 {
+  font-family: $decorative-lite;
+}
+
+.form input {
+  border: none;
+  background-color: #222222;
+  color: $font-color;
+  transition: ease-in-out 0.2s;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form input:focus,
+.form input:invalid {
+  outline: none;
+  border-bottom: 1px solid #222222;
+  box-shadow: none;
+}
+
+.form label {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.cardInfoLabel {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.checkoutContainer form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $primary-color;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.submitButton {
+  border: none;
+  border-radius: 0;
+  background-color: $secondary-color;
+  font-family: $decorative-lite;
+  -moz-appearance: none;
+  appearance: none;
+  transition: ease-in-out 0.2s;
+}
+
+.submitButton:hover {
+  background: rgb(230, 39, 39);
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.submitButton:active {
+  background-color: $secondary-color;
+}
+
+.submitButton:disabled {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+}
+.responseDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  height: 0;
+  transition: ease-in-out 0.2s;
+}
+
+.alert {
+  padding: 0.5em;
+  background: $primary-color;
+  color: $font-color;
+  outline: none;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.spinner {
+  color: $secondary-color;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .checkoutContainer form {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .form label {
+    font-size: 1.2em;
+  }
+
+  .form input {
+    height: 2.5em;
+    width: 90%;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+  }
+  .form input:active,
+  .form input:focus {
+    border-bottom: 2px solid rgb(226, 1, 1);
+  }
+
+  .cardElementContainer {
+    padding: 0.8em;
+    background: #222222;
+    display: block;
+    width: 90%;
+  }
+
+  .submitButton {
+    height: 3em;
+    width: 90%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+  }
+  .checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .checkoutContainer form {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .form label {
+    font-size: 1.2em;
+  }
+
+  .form input {
+    height: 2.5em;
+    width: 90%;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+  }
+  .form input:active,
+  .form input:focus {
+    border-bottom: 2px solid rgb(226, 1, 1);
+  }
+
+  .cardElementContainer {
+    padding: 0.8em;
+    background: #222222;
+    display: block;
+    width: 90%;
+  }
+
+  .submitButton {
+    height: 3em;
+    width: 90%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .wrapper h3 {
+    grid-row: 1/3;
+    grid-column: 1/13;
+    text-align: center;
+  }
+
+  .checkoutContainer {
+    grid-column: 1/8;
+    grid-row: 3/12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    // border: 1px solid $secondary-color;
+  }
+
+  .checkoutContainer form {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .form input {
+    width: 90%;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+  }
+
+  .form input:active,
+  .form input:focus {
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  .cardElementContainer {
+    padding: 0.8em;
+    background: #222222;
+    display: block;
+    width: 90%;
+  }
+
+  .submitButton {
+    height: 3em;
+    width: 90%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+
+  .sideImg {
+    grid-column: 8/13;
+    grid-row: 3/12;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../../../assets/checkoutDrums.jpg');
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+  }
+  .quote {
+    color: rgb(187, 187, 187) !important;
+    padding: 1em;
+    font-size: 2em !important;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .wrapper h3 {
+    grid-row: 1/3;
+    grid-column: 1/13;
+    text-align: center;
+  }
+
+  .checkoutContainer {
+    grid-column: 1/8;
+    grid-row: 3/12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    // border: 1px solid $secondary-color;
+  }
+
+  .form {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .form input {
+    width: 90%;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+  }
+
+  .form input:active,
+  .form input:focus {
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  .cardElementContainer {
+    padding: 0.8em;
+    background: #222222;
+    display: block;
+    width: 90%;
+  }
+
+  .submitButton {
+    height: 3em;
+    width: 90%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+
+  .sideImg {
+    grid-column: 8/13;
+    grid-row: 3/12;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../../../assets/checkoutDrums.jpg');
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+  }
+  .quote {
+    color: rgb(187, 187, 187) !important;
+    padding: 1em;
+    font-size: 2.5em !important;
+    align-self: center;
+    justify-self: center;
+  }
+}

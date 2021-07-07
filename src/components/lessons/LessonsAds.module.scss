@@ -1,0 +1,682 @@
+@import '../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+}
+.wrapper p,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h1,
+.wrapper h6 {
+  font-family: $standard;
+  color: $font-color;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+  font-family: $decorative-lite;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+  font-family: $decorative-lite;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+  font-family: $decorative-lite;
+}
+
+.wrapper h5 {
+  font-size: 1.5em;
+  font-family: $decorative-lite;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+}
+
+.wrapper a,
+.wrapper a:hover,
+.wrapper a:focus,
+.wrapper a:active {
+  text-decoration: none;
+  color: $font-color;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.jumbotron {
+  position: relative;
+  background: linear-gradient(rgba(black, 0.6), rgba(black, 0.9)), url('../../assets/snareDrum.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+}
+
+.headline {
+  grid-column: 2/12;
+  grid-row: 5/8;
+  text-align: center;
+}
+
+.headlineInfo {
+  grid-column: 2/12;
+  grid-row: 9/13;
+  text-align: center;
+  font-size: 1.1em !important;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+}
+
+.features h2 {
+  font-family: $decorative-lite;
+}
+
+.featureA {
+  position: relative;
+  background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/handdrum.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border {
+  border: 5px solid $font-color;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+}
+
+.border h3 {
+  font-family: $decorative-lite;
+  text-align: center;
+}
+
+.border p {
+  width: 90%;
+  font-weight: 400;
+}
+
+.featureB {
+  position: relative;
+  background: $secondary-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featureB .border {
+  border: 5px solid $primary-color;
+}
+
+.featureC {
+  position: relative;
+  background: grey;
+  background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)),
+    url('../../assets/paulo-evangelista-fgnyEJAZSDU-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featureHeading {
+  grid-column: 1/13;
+  grid-row: 2/4;
+  align-self: center;
+}
+
+.featureInfo {
+  grid-column: 1/13;
+  grid-row: 5/9;
+  align-self: center;
+  text-align: center;
+  font-size: 1.3em !important;
+}
+
+.featureLink {
+  grid-column: 1/13;
+  grid-row: 10/13;
+  align-self: center;
+  text-align: center;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+    font-family: $standard;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 140vh;
+  }
+
+  .featureA {
+    grid-column: 1/13;
+    grid-row: 1/5;
+  }
+
+  .border {
+    border: 3px solid $font-color;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 1/13;
+    grid-row: 5/9;
+  }
+
+  .featureB .border {
+    border: 3px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 1/13;
+    grid-row: 9/13;
+  }
+
+  .philosophyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2em;
+    margin: 2em 0;
+  }
+
+  .philosophyContainer h3 {
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .philosophyContainer p {
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .packages h3 {
+    text-align: center;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background: $background-lite;
+    margin: 1em 0;
+  }
+
+  .package h5 {
+    padding: 0.5em 0;
+    background: $secondary-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  .package p {
+    margin: 1em 0;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+    font-family: $standard;
+  }
+
+  .features {
+    width: 100%;
+    height: 140vh;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .featureA {
+    grid-column: 1/13;
+    grid-row: 1/5;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 1/13;
+    grid-row: 5/9;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 1/13;
+    grid-row: 9/13;
+  }
+
+  .philosophyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3em;
+    margin: 2em 0;
+  }
+
+  .philosophyContainer h3 {
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .philosophyContainer p {
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .packages h3 {
+    text-align: center;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    background: $background-lite;
+    margin: 1em 0;
+  }
+
+  .package h5 {
+    padding: 0.5em 0;
+    background: $secondary-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  .package p {
+    margin: 1em 0;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 18px;
+    font-family: $standard;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .featureA {
+    grid-column: 1/5;
+    grid-row: 1/13;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 5/9;
+    grid-row: 1/13;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 9/13;
+    grid-row: 1/13;
+  }
+
+  .philosophyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 6em;
+    margin: 3em 0;
+  }
+
+  .philosophyContainer h3 {
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .philosophyContainer p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 2;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .packages h3 {
+    text-align: center;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background: $background-lite;
+    margin: 1em 0;
+  }
+
+  .package h5 {
+    padding: 0.5em 0;
+    background: $secondary-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  .package p {
+    margin: 1em 0;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 18px;
+    font-family: $standard;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .featureA {
+    grid-column: 1/5;
+    grid-row: 1/13;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 5/9;
+    grid-row: 1/13;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 9/13;
+    grid-row: 1/13;
+  }
+
+  .philosophyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 6em;
+    margin: 3em 0;
+  }
+
+  .philosophyContainer h3 {
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .philosophyContainer p {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 2;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .packages h3 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background: $background-lite;
+    margin: 1em 0;
+  }
+
+  .package h5 {
+    padding: 0.5em 0;
+    background: $secondary-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  .package p {
+    margin: 1em 0;
+  }
+}

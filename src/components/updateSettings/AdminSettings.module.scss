@@ -1,0 +1,340 @@
+@import '../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 11em);
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+}
+
+.spinnerMain {
+  color: $secondary-color;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.loadingMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+}
+
+.studentsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.studentInfo {
+  background: #222222;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.info p:first-child {
+  font-family: $decorative-lite;
+  font-weight: bolder;
+}
+
+.wrapper button {
+  outline: none;
+  border: none;
+  color: $font-color;
+  background: $secondary-color;
+  transition: ease-in-out 0.2s;
+}
+
+.wrapper button:hover {
+  background: rgb(230, 39, 39);
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.responseDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  margin-top: 1em;
+  overflow: hidden;
+  height: 0;
+  transition: ease-in-out 0.2s;
+}
+
+@include media('<small') {
+  .wrapper h3 {
+    align-self: center;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .studentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .studentInfo {
+    width: 90%;
+    margin: 2em 0;
+    padding-bottom: 1em;
+  }
+
+  .studentInfo h5 {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: $secondary-color;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .paymentHistoryModalContainer {
+    width: 45%;
+  }
+
+  .deleteButton {
+    width: 45%;
+    padding: 1em;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper h3 {
+    align-self: center;
+  }
+
+  .packages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .studentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .studentInfo {
+    width: 80%;
+    margin: 2em 0;
+    padding-bottom: 1em;
+  }
+
+  .studentInfo h5 {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: $secondary-color;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paymentHistoryModalContainer {
+    width: 85%;
+  }
+
+  .deleteButton {
+    width: 85%;
+    padding: 1em;
+    margin: 0.5em 0;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper h3 {
+    align-self: flex-start;
+    margin-left: 1.5em;
+  }
+
+  .packages {
+    display: flex;
+    width: 100%;
+    min-height: 61vh;
+    margin-bottom: 3em;
+  }
+
+  .newPackage {
+    height: 100%;
+    width: 33%;
+    margin-left: 2em;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 67%;
+  }
+
+  .studentsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .studentInfo {
+    width: 45%;
+    margin: 2em 1em;
+    padding-bottom: 1em;
+  }
+
+  .studentInfo h5 {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: $secondary-color;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paymentHistoryModalContainer {
+    width: 85%;
+  }
+
+  .deleteButton {
+    width: 85%;
+    padding: 1em;
+    margin: 0.5em 0;
+  }
+}
+
+@include media('>large') {
+  .wrapper h3 {
+    align-self: flex-start;
+    margin-left: 1.5em;
+  }
+
+  .packages {
+    display: flex;
+    width: 100%;
+    min-height: 61vh;
+    margin-bottom: 3em;
+  }
+
+  .newPackage {
+    height: 100%;
+    width: 33%;
+    margin-left: 2em;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 67%;
+  }
+
+  .studentsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .studentInfo {
+    width: 30%;
+    margin: 2em 0;
+    padding-bottom: 1em;
+  }
+
+  .studentInfo h5 {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    background: $secondary-color;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paymentHistoryModalContainer {
+    width: 85%;
+  }
+
+  .deleteButton {
+    width: 85%;
+    padding: 1em;
+    margin: 0.5em 0;
+  }
+}

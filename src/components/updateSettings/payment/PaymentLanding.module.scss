@@ -1,0 +1,195 @@
+@import '../../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.wrapper h3 {
+  margin-bottom: 2em;
+}
+
+.submitButton {
+  border: none;
+  border-radius: 0;
+  background-color: $secondary-color;
+  font-family: $decorative-lite;
+  margin: 1em 0;
+  -moz-appearance: none;
+  appearance: none;
+  transition: ease-in-out 0.2s;
+}
+
+.packagesContainer {
+  margin-bottom: 3em;
+}
+
+.packagesContainer form {
+  width: 100%;
+}
+
+.submitButton:hover {
+  background: rgb(230, 39, 39);
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.submitButton:active {
+  background-color: $secondary-color;
+}
+
+.submitButton:disabled {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .submitButton {
+    padding: 1em;
+    width: 100%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .submitButton {
+    padding: 1em;
+    width: 100%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .packagesContainer form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .submitButton {
+    padding: 1em;
+    width: 25%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .packagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .packagesContainer form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .submitButton {
+    padding: 1em;
+    width: 30%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+    margin-top: 1em;
+  }
+}

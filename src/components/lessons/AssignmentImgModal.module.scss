@@ -1,0 +1,108 @@
+@import '../../variables.scss';
+
+.wrapper {
+  width: 100%;
+  background: transparent;
+}
+
+.imgTogglerContainer {
+  position: relative;
+  width: 100%;
+}
+
+.imgToggler {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: ease-in-out 0.2s;
+}
+
+.imgToggler:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 13px -7px $secondary-color, 5px 5px 15px 5px rgba($secondary-color, 0);
+  box-shadow: 0px 10px 13px -7px $secondary-color, 5px 5px 15px 5px rgba(rgba($secondary-color, 0), 0);
+}
+
+.imgsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 1em;
+}
+
+.img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: ease-in-out 0.2s;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigation button {
+  width: 4em;
+  height: 4em;
+  border: none;
+  border-radius: 100%;
+  margin: 1em 0;
+  transition: ease-in-out 0.2s;
+}
+
+.navigation button:hover {
+  background: $secondary-color;
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .modal {
+    width: 100vw;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .modal {
+    width: 98vw;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .modal {
+    max-width: 80vw !important;
+  }
+
+  .modalContent {
+    max-width: 100%;
+    background: transparent !important;
+  }
+
+  .navigation button {
+    margin: 1em 2em !important;
+  }
+}
+
+@include media('>large') {
+  .modal {
+    max-width: 80vw !important;
+  }
+
+  .modalContent {
+    max-width: 100%;
+    background: transparent !important  ;
+  }
+  .navigation button {
+    margin: 1em 2em !important;
+  }
+}

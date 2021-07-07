@@ -1,0 +1,235 @@
+@import '../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.burgerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  margin-bottom: 1.5em;
+  transition: height 0.5s ease-out;
+}
+
+.formContainer form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form label {
+  color: $font-color;
+  font-family: $decorative-lite;
+  font-size: 1.2em;
+}
+
+.form input,
+.form textarea {
+  height: 2.5em;
+  width: 90%;
+  font-size: 1.1em;
+  padding: 0.5em 1.5em;
+  border: none;
+  background-color: #222222;
+  color: $font-color;
+  transition: ease-in-out 0.2s;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form input:active,
+.form textarea:active {
+  outline: none;
+  border-bottom: 2px solid rgb(226, 1, 1);
+  box-shadow: none;
+}
+
+.form textarea {
+  height: 7em;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.fileInputLabel {
+  border: 1px solid $font-color;
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  transition: ease-in-out 0.15s;
+}
+
+.fileInputLabel:hover {
+  border: 1px solid $font-color;
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  background: $secondary-color;
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.fileContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 2em;
+}
+
+.fileName {
+  font-size: 0.8em !important;
+  margin-right: 1em;
+}
+
+.fileDeleter {
+  font-size: 0.8em !important;
+  cursor: pointer;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  border-bottom: 1px solid $secondary-color;
+}
+
+.tagInfo {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.tagName {
+  margin: 1em 0.5em;
+}
+
+.tagDeleter {
+  cursor: pointer;
+  margin: 1em 0.5em;
+}
+
+.progressTracker {
+  height: 0.8em;
+  font-size: 0.8em;
+}
+
+.submitButton,
+.uploadBtn {
+  width: 50%;
+  padding: 1em;
+  color: $font-color;
+  border: none;
+  border-radius: 0;
+  background-color: $secondary-color;
+  font-family: $decorative-lite;
+  -moz-appearance: none;
+  appearance: none;
+  transition: ease-in-out 0.2s;
+}
+
+.submitButton:hover,
+.uploadBtn:hover {
+  background: rgb(230, 39, 39);
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.submitButton:active,
+.uploadBtn:active {
+  background-color: $secondary-color;
+}
+
+.submitButton:disabled,
+.uploadBtn:disabled {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.responseDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  overflow: hidden;
+  height: 0;
+  transition: height ease-in-out 0.2s;
+}
+
+.alert {
+  padding: 0.5em;
+  background: $primary-color;
+  color: $font-color;
+  outline: none;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.spinner {
+  color: $secondary-color;
+}

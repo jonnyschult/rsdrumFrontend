@@ -1,0 +1,205 @@
+@import '../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+  color: $font-color;
+  font-family: $standard;
+}
+
+.loadingMain {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.spinnerMain {
+  color: $secondary-color;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.level {
+  width: 100%;
+}
+
+.levelsContainer h3 {
+  margin: 1em;
+}
+
+.lessonsContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+@include media('<small') {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .levelsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .lessonsContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .levelsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .lessonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .levelsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .lessonsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .levelsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .lessonsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+}

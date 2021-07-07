@@ -1,0 +1,250 @@
+@import '../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: $primary-color;
+  color: $font-color;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+}
+
+.packageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222222;
+}
+
+.packageContainer h5 {
+  background: $secondary-color;
+  width: 100%;
+  text-align: center;
+  padding: 0.75em 0;
+  margin-bottom: 1em;
+}
+
+.costContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.costContainer p:first-child {
+  font-family: $decorative-lite;
+  font-weight: bolder;
+}
+
+.formContainer {
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+  height: 0px;
+  background: #222222;
+  width: 100%;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formContainer input {
+  border: none;
+  background-color: #333333;
+  padding: 0.5em;
+  color: $font-color;
+  width: 80%;
+  margin-bottom: 1.5em;
+  transition: ease-in-out 0.2s;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.formContainer input:focus,
+.formContainer input:invalid {
+  outline: none;
+  border-bottom: 1px solid #222222;
+  box-shadow: none;
+}
+
+.formContainer label {
+  color: $font-color;
+  font-family: $decorative-lite;
+  font-size: 1.2em;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222222;
+  width: 100%;
+}
+
+.submitButton {
+  outline: none;
+  border: none;
+  color: $font-color;
+  background: $secondary-color;
+  padding: 1em;
+  margin: 0.5em 0;
+  transition: ease-in-out 0.2s;
+}
+
+.submitButton:hover {
+  background: rgb(230, 39, 39);
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.submitButton:disabled {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+}
+
+.submitButton:disabled:hover {
+  background-color: rgb(80, 80, 80);
+  cursor: not-allowed;
+  -webkit-box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+}
+
+.spinner {
+  color: $secondary-color;
+}
+
+.responseDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  overflow: hidden;
+  height: 0;
+  transition: ease-in-out 0.2s;
+}
+
+.alert {
+  position: relative;
+  background: $primary-color;
+  color: $font-color;
+  font-size: 0.5em;
+  width: 100%;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  padding: 0.4em;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.burgerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.burgerContainer p {
+  margin: 0;
+}
+
+@include media('<small') {
+  .wrapper {
+    align-items: center;
+  }
+
+  .packageContainer {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+
+  .submitButton {
+    width: 80%;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    align-items: center;
+  }
+
+  .packageContainer {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  .submitButton {
+    width: 80%;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    align-items: center;
+    width: 48%;
+  }
+
+  .packageContainer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .submitButton {
+    width: 80%;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    align-items: center;
+    width: 32%;
+  }
+
+  .packageContainer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .submitButton {
+    width: 80%;
+  }
+}

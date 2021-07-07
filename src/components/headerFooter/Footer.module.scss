@@ -1,0 +1,334 @@
+@import '../../variables.scss';
+
+.footer {
+  background: $secondary-color;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.footer p,
+.footer h5 {
+  font-family: $decorative-lite;
+  margin: 0;
+  font-weight: bolder;
+  color: $primary-color;
+}
+
+.icon {
+  color: $primary-color;
+}
+
+.icon:hover {
+  color: $font-color;
+  transition: 0.15s;
+}
+
+@include media('<small') {
+  .footer {
+    height: 15em;
+  }
+
+  .nobleTech {
+    grid-column: 1/7;
+    grid-row: 1/11;
+  }
+
+  .nobleTech h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+  }
+
+  .nobleTech a {
+    grid-column: 1/13;
+    grid-row: 3/11;
+    align-self: center;
+    justify-self: center;
+    height: 5em;
+  }
+
+  .nobleTech img {
+    height: 5em;
+  }
+
+  .nobleTech p {
+    grid-column: 1/13;
+    grid-row: 1/10;
+    grid-row: 11/13;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .links {
+    grid-column: 7/13;
+    grid-row: 1/11;
+  }
+
+  .links h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+  }
+
+  .socialMediaLinks {
+    justify-self: center;
+  }
+
+  .facebook {
+    grid-column: 1/13;
+    grid-row: 3/8;
+    font-size: 3em;
+  }
+  .youtube {
+    grid-column: 1/13;
+    grid-row: 8/13;
+    font-size: 3em;
+  }
+
+  .copyright {
+    grid-column: 1/13;
+    grid-row: 11/13;
+    justify-self: center;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .footer {
+    height: 15em;
+  }
+
+  .nobleTech {
+    grid-column: 1/7;
+    grid-row: 1/11;
+  }
+
+  .nobleTech h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+  }
+
+  .nobleTech a {
+    grid-column: 1/13;
+    grid-row: 3/11;
+    align-self: center;
+    justify-self: center;
+    height: 5em;
+  }
+
+  .nobleTech img {
+    height: 5em;
+  }
+
+  .nobleTech p {
+    grid-column: 1/13;
+    grid-row: 1/10;
+    grid-row: 11/13;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .links {
+    grid-column: 7/13;
+    grid-row: 1/11;
+  }
+
+  .links h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+  }
+
+  .socialMediaLinks {
+    justify-self: center;
+  }
+
+  .facebook {
+    grid-column: 1/13;
+    grid-row: 3/8;
+    font-size: 3em;
+  }
+  .youtube {
+    grid-column: 1/13;
+    grid-row: 8/13;
+    font-size: 3em;
+  }
+
+  .copyright {
+    grid-column: 1/13;
+    grid-row: 11/13;
+    justify-self: center;
+    font-size: 1.2em;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .footer {
+    height: 11em;
+  }
+
+  .nobleTech {
+    grid-column: 1/5;
+    grid-row: 1/13;
+  }
+
+  .nobleTech h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  .nobleTech a {
+    grid-column: 1/13;
+    grid-row: 4/11;
+    align-self: center;
+    justify-self: center;
+    height: 5em;
+  }
+
+  .nobleTech img {
+    height: 5em;
+  }
+
+  .nobleTech p {
+    grid-column: 1/13;
+    grid-row: 1/10;
+    grid-row: 11/13;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .links {
+    grid-column: 9/13;
+    grid-row: 1/13;
+  }
+
+  .links h5 {
+    grid-column: 1/13;
+    grid-row: 6/8;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  .facebook {
+    grid-column: 1/13;
+    grid-row: 1/6;
+    font-size: 3em;
+    text-align: center;
+    align-self: center;
+  }
+
+  .youtube {
+    grid-column: 1/13;
+    grid-row: 8/13;
+    font-size: 3em;
+    text-align: center;
+    align-self: center;
+  }
+
+  .copyright {
+    grid-column: 5/9;
+    grid-row: 6/13;
+    justify-self: center;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@include media('>large') {
+  .footer {
+    height: 11em;
+  }
+
+  .nobleTech {
+    grid-column: 1/5;
+    grid-row: 1/13;
+  }
+
+  .nobleTech h5 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  .nobleTech a {
+    grid-column: 1/13;
+    grid-row: 4/11;
+    align-self: center;
+    justify-self: center;
+    height: 5em;
+  }
+
+  .nobleTech img {
+    height: 5em;
+  }
+
+  .nobleTech p {
+    grid-column: 1/13;
+    grid-row: 1/10;
+    grid-row: 11/13;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .links {
+    grid-column: 9/13;
+    grid-row: 1/13;
+  }
+
+  .links h5 {
+    grid-column: 1/13;
+    grid-row: 6/8;
+    align-self: center;
+    justify-self: center;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  .facebook {
+    grid-column: 1/13;
+    grid-row: 1/6;
+    font-size: 3em;
+    text-align: center;
+    align-self: center;
+  }
+
+  .youtube {
+    grid-column: 1/13;
+    grid-row: 8/13;
+    font-size: 3em;
+    text-align: center;
+    align-self: center;
+  }
+
+  .copyright {
+    grid-column: 5/9;
+    grid-row: 6/13;
+    justify-self: center;
+    text-align: center;
+    margin: 0;
+  }
+}

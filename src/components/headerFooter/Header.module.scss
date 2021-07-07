@@ -1,0 +1,136 @@
+@import '../../variables.scss';
+
+.header p,
+.header a {
+  text-decoration: none;
+  font-family: $standard;
+  font-weight: 500;
+  outline: none;
+}
+
+.header a:hover,
+.header p:hover {
+  color: $secondary-color;
+  text-decoration: none;
+  font-family: $standard;
+  cursor: pointer;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  position: fixed;
+  top: 0px;
+  height: 10em;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.inactiveHeader {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+  opacity: 1;
+}
+
+.scrollDownHeader {
+  opacity: 0;
+  visibility: hidden;
+}
+.scrollUpHeader {
+  opacity: 1;
+  visibility: visible;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.logoContainer {
+  display: flex;
+  align-self: center;
+  grid-column: 1/6;
+  grid-row: 1/7;
+  height: 5em;
+  margin-left: 2em;
+}
+
+.logoLink,
+.logoLink img {
+  display: flex;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.linksContainer * {
+  color: $font-color;
+  text-decoration: none;
+  margin-right: 2rem;
+  transition: 0.1s ease-in;
+}
+
+.linksContainerA {
+  grid-column: 8/13;
+  grid-row: 2/4;
+  align-self: center;
+}
+
+.linksContainerB a,
+.linksContainerB p {
+  font-size: 1.2em;
+}
+
+.linksContainerB {
+  grid-column: 9/13;
+  grid-row: 4/6;
+  align-self: center;
+}
+
+.burgerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 10/12;
+  grid-row: 1/7;
+}
+
+.burgerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 10em;
+  width: 100%;
+  height: 20em;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.burgerLinks a,
+.burgerLinks p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.2em;
+  color: $font-color;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($color: $font-color, $alpha: 0.4);
+}
+
+@include media('<small') {
+}
+
+@include media('>=small', '<medium') {
+}
+
+@include media('>=medium', '<large') {
+}
+
+@include media('>large') {
+}

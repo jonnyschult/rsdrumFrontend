@@ -1,0 +1,394 @@
+@import '../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  position: relative;
+  background: #222222;
+  color: $font-color;
+  padding-bottom: 1em;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.2s ease-in 0s 1 normal forwards;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+  font-family: $standard;
+  color: $font-color;
+}
+
+.videoContainer h5 {
+  width: 100%;
+  background-color: $secondary-color;
+  font-family: $decorative-lite;
+  color: $font-color;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.iframeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px !important;
+  width: 40px !important;
+  color: $secondary-color;
+}
+
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+  height: 0px;
+}
+
+.videoTagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.videoTagP {
+  margin: 1em;
+  font-family: $decorative-lite !important;
+  transition: ease-in-out 0.1s;
+  white-space: pre-wrap;
+}
+
+.videoTagP:hover {
+  cursor: pointer;
+  -webkit-text-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  text-shadow: 4px 4px 2px rgb(0, 0, 0);
+}
+
+.burgerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burgerContainer p {
+  margin: 1em 0 0 0;
+}
+
+.adminModal {
+  background: $primary-color;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .videoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 3em 0;
+  }
+
+  .iframeContainer {
+    width: 100%;
+    height: 56.25vw;
+  }
+
+  .videoTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 4.5em;
+    background-color: $secondary-color;
+  }
+
+  .title {
+    font-family: $decorative-lite;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .videoContainer iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .videoContainer .description {
+    padding: 2em;
+    font-family: $standard;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .videoTagsContainer {
+    justify-content: center;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 18px;
+  }
+
+  .videoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 3em 0;
+  }
+
+  .iframeContainer {
+    width: 100%;
+    height: 56.25vw;
+  }
+
+  .videoContainer iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .videoTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 4.5em;
+    background-color: $secondary-color;
+  }
+
+  .title {
+    font-family: $decorative-lite;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .videoContainer .description {
+    padding: 2em;
+    font-family: $standard;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .videoTagsContainer {
+    justify-content: center;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    padding: 2em;
+  }
+  .videoContainer {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 20em;
+  }
+
+  .videoTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 4.5em;
+    background-color: $secondary-color;
+  }
+
+  .title {
+    font-family: $decorative-lite;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .iframeContainer {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    width: 100%;
+  }
+
+  .videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .videoContainer .description {
+    font-family: $standard;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 1em 0;
+  }
+
+  .videoTagsContainer {
+    justify-content: center;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 16px;
+    padding: 2em;
+  }
+
+  .videoContainer {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 20em;
+  }
+
+  .videoTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 4.5em;
+    background-color: $secondary-color;
+  }
+
+  .title {
+    font-family: $decorative-lite;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .iframeContainer {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    width: 100%;
+  }
+
+  .videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .videoContainer .description {
+    font-family: $standard;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 1em 0;
+  }
+
+  .videoTagsContainer {
+    justify-content: center;
+  }
+}

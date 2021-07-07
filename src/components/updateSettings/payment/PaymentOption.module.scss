@@ -1,0 +1,225 @@
+@import '../../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.packageContainer {
+  background: #222222;
+  transition: all ease-in-out 0.3s;
+}
+
+.selected {
+  background: $secondary-color;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.quantityInput {
+  border: none;
+  background-color: #333333;
+  color: $font-color;
+  margin: 0 0 1em 0;
+  transition: ease-in-out 0.2s;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.quantityInput:focus,
+.quantityInput:invalid {
+  outline: none;
+  border-bottom: 1px solid #333333;
+  box-shadow: none;
+}
+
+.selected .quantityInput {
+  background: $font-color;
+  color: $primary-color;
+}
+
+.selectionInput {
+  margin: 1em 0;
+}
+
+.wrapper label {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.responseDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  align-self: center;
+  overflow: hidden;
+  height: 0;
+  transition: ease-in-out 0.2s;
+}
+
+.alert {
+  position: relative;
+  background: $primary-color;
+  color: $font-color;
+  width: 100%;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+    margin: 0.5em 0;
+  }
+
+  .packageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 1.5em;
+  }
+
+  .packageContainer h5 {
+    margin-bottom: 1.5em;
+  }
+
+  .quantityInput {
+    padding: 0.5em 1em;
+  }
+
+  .alert {
+    width: 90%;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+    margin: 0.5em 0;
+  }
+
+  .packageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 1.5em;
+  }
+
+  .packageContainer h5 {
+    margin-bottom: 1.5em;
+  }
+
+  .quantityInput {
+    padding: 0.5em 1em;
+  }
+
+  .alert {
+    width: 90%;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 16px;
+    width: 45%;
+    margin: 1em;
+  }
+
+  .packageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1.5em;
+  }
+
+  .packageContainer h5 {
+    margin-bottom: 1.5em;
+  }
+
+  .quantityInput {
+    padding: 0.5em 1em;
+  }
+
+  .alert {
+    width: 90%;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 16px;
+    width: 30%;
+    margin: 1em;
+  }
+
+  .packageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1.5em;
+  }
+
+  .packageContainer h5 {
+    margin-bottom: 1.5em;
+  }
+
+  .quantityInput {
+    width: 100%;
+    padding: 0.5em 1em;
+  }
+
+  .alert {
+    width: 90%;
+  }
+}

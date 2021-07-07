@@ -1,0 +1,148 @@
+@import '../../../variables.scss';
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+  color: $font-color;
+  font-family: $standard;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.18s ease-in 0s 1 normal forwards;
+}
+
+.title {
+  margin: 1em 0;
+}
+
+.wrapper h3 {
+  margin-bottom: 2em;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .receiptsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .link {
+    width: 40%;
+  }
+
+  .submitButton {
+    padding: 1em;
+    width: 100%;
+    color: $font-color;
+    align-self: center;
+    font-size: 1em;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .receiptsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .receiptsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .receiptsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}

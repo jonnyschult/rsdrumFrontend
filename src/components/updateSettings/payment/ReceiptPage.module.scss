@@ -1,0 +1,147 @@
+@import '../../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+}
+
+.bigSpinner {
+  color: $secondary-color;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $primary-color;
+  color: $font-color;
+  margin: 2em 0;
+}
+
+.wrapper h1 {
+  font-family: $decorative;
+}
+
+.wrapper {
+  background: $primary-color;
+  color: $font-color;
+  border: 1px solid $secondary-color;
+  padding: 2em 1em;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.info p:first-child {
+  font-weight: bolder;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .wrapper img {
+    width: 10em;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .wrapper img {
+    width: 30%;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+
+  .wrapper img {
+    width: 30%;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+    width: 30%;
+  }
+
+  .wrapper img {
+    width: 30%;
+  }
+}

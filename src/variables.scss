@@ -1,0 +1,30 @@
+@import '../node_modules/include-media/dist/include-media';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative&family=Raleway&display=swap');
+
+$breakpoints: (
+  small: 400px,
+  medium: 700px,
+  large: 1200px,
+);
+
+@font-face {
+  font-family: 'selawik';
+  src: url('assets/fonts/selawk.ttf');
+}
+
+@font-face {
+  font-family: 'Paradox Italic';
+  src: url('assets/fonts/paradoxi.ttf');
+}
+
+$secondary-color: #be2828;
+$primary-color: #1b1b1b;
+$background-lite: #2c2c2c;
+$font-color: #f8f7e7;
+$font-darker: #f8f7e7a6;
+$standard: 'Raleway', sans-serif;
+$decorative: 'Cinzel Decorative', serif;
+$decorative-lite: 'Cinzel', sans-serif;
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;

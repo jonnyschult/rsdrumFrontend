@@ -1,0 +1,686 @@
+@import '../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.3s ease-in 0s 1 normal forwards;
+}
+.wrapper p,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h1,
+.wrapper h6 {
+  font-family: $standard;
+  color: $font-color;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.jumbotron {
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 75vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tint {
+  position: relative;
+  height: 85vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  text-align: center;
+}
+
+.wrapper video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.tint h1 {
+  grid-column: 6/12;
+  grid-row: 6/7;
+  text-align: right;
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.bio {
+  background-color: $primary-color;
+}
+
+.bio h2 {
+  font-family: $decorative;
+}
+
+.bio p {
+  color: $font-color;
+  font-weight: 500;
+}
+
+.location {
+  background: $secondary-color;
+}
+
+.parallax {
+  background-image: url('../../assets/goldDrums.jpg');
+  min-height: 55vh;
+  perspective: 1px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+}
+
+.features h2 {
+  font-family: $decorative-lite;
+}
+
+.contact h2 {
+  background-color: $secondary-color;
+  font-family: $decorative;
+  margin: 0;
+  padding: 2rem;
+}
+
+@include media('<small') {
+  .wrapper {
+    font-size: 14px;
+    font-family: $standard;
+  }
+  .tint h1 {
+    grid-column: 2/12;
+    grid-row: 8/10;
+    text-align: right;
+    font-size: 2rem;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .bio {
+    grid-row: 1/10;
+    grid-column: 1/13;
+    height: auto;
+  }
+
+  .bio h2 {
+    grid-column: 2/13;
+    grid-row: 2/4;
+  }
+
+  .bio p {
+    grid-column: 2/12;
+    grid-row: 5/13;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .location {
+    grid-column: 1/13;
+    grid-row: 10/13;
+  }
+
+  .location h3 {
+    grid-column: 1/13;
+    grid-row: 2/4;
+    text-align: center;
+    font-family: $decorative-lite;
+  }
+
+  .location h4 {
+    grid-column: 1/13;
+    grid-row: 4/12;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 140vh;
+  }
+
+  .featureA {
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/5;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drumStudent.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .border {
+    border: 3px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    position: relative;
+    background: $secondary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/13;
+    grid-row: 5/9;
+  }
+
+  .featureB .border {
+    border: 3px solid $primary-color;
+  }
+
+  .featureC {
+    position: relative;
+    background: grey;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drummer.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/13;
+    grid-row: 9/13;
+  }
+
+  .contact h2 {
+    font-family: $decorative;
+    text-align: center;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .wrapper {
+    font-size: 16px;
+    font-family: $standard;
+  }
+  .tint h1 {
+    grid-column: 2/12;
+    grid-row: 8/10;
+    text-align: right;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .bio {
+    grid-row: 1/9;
+    grid-column: 1/13;
+  }
+
+  .bio h2 {
+    grid-column: 2/13;
+    grid-row: 2/4;
+  }
+
+  .bio p {
+    grid-column: 2/12;
+    grid-row: 5/13;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .location {
+    grid-column: 1/13;
+    grid-row: 9/13;
+  }
+
+  .location h3 {
+    grid-column: 1/13;
+    grid-row: 3/5;
+    text-align: center;
+    font-family: $decorative-lite;
+  }
+
+  .location h4 {
+    grid-column: 1/13;
+    grid-row: 5/12;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 140vh;
+  }
+
+  .featureA {
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/5;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drumStudent.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    position: relative;
+    background: $secondary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/13;
+    grid-row: 5/9;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    position: relative;
+    background: grey;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drummer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/13;
+    grid-row: 9/13;
+  }
+
+  .contact h2 {
+    font-family: $decorative;
+    text-align: center;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .wrapper {
+    font-size: 18px;
+    font-family: $standard;
+  }
+
+  .tint h1 {
+    grid-column: 2/12;
+    grid-row: 8/10;
+    text-align: right;
+  }
+
+  .about {
+    height: auto;
+    padding: 1em;
+  }
+
+  .bio {
+    grid-column: 1/9;
+    grid-row: 1/13;
+  }
+  .bio h2 {
+    grid-column: 3/13;
+    grid-row: 3/5;
+  }
+
+  .bio p {
+    grid-column: 3/12;
+    grid-row: 5/13;
+    line-height: 2;
+    padding: 1em 0 2em 0;
+  }
+
+  .location {
+    grid-column: 9/13;
+    grid-row: 1/13;
+  }
+
+  .location h3 {
+    grid-column: 1/13;
+    grid-row: 3/5;
+    text-align: center;
+    font-family: $decorative-lite;
+  }
+  .location h4 {
+    grid-column: 3/12;
+    grid-row: 7/13;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .featureA {
+    position: relative;
+    grid-column: 1/5;
+    grid-row: 1/13;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drumStudent.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 5/9;
+    grid-row: 1/13;
+    position: relative;
+    background: $secondary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 9/13;
+    grid-row: 1/13;
+    position: relative;
+    background: grey;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drummer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact {
+    background: $primary-color;
+  }
+
+  .contact h2 {
+    font-family: $decorative !important;
+    text-align: center;
+    background: $primary-color;
+  }
+}
+
+@include media('>large') {
+  .wrapper {
+    font-size: 18px;
+    font-family: $standard;
+  }
+
+  .tint h1 {
+    grid-column: 2/12;
+    grid-row: 8/10;
+    text-align: right;
+  }
+
+  .about {
+    height: auto;
+    background-color: $primary-color;
+    padding: 2em 1em;
+  }
+
+  .bio {
+    grid-column: 3/9;
+    grid-row: 1/13;
+  }
+  .bio h2 {
+    grid-column: 3/13;
+    grid-row: 3/5;
+  }
+
+  .bio p {
+    grid-column: 3/10;
+    grid-row: 5/13;
+    line-height: 1.8;
+    font-size: 1.3em;
+    margin-bottom: 2em;
+  }
+
+  .bobDrums {
+    display: flex;
+    grid-column: 9/13;
+    grid-row: 1/13;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../assets/bobDrums.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .location {
+    grid-column: 1/3;
+    grid-row: 1/13;
+  }
+
+  .location h3 {
+    grid-column: 1/13;
+    grid-row: 3/5;
+    text-align: center;
+    font-family: $decorative-lite;
+    font-size: 1.7em !important;
+  }
+  .location h4 {
+    grid-column: 3/12;
+    grid-row: 5/13;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .featuresContainer h2 {
+    padding: 2rem 0;
+    text-align: center;
+    font-family: $decorative-lite;
+    color: $font-color;
+    width: 90%;
+  }
+
+  .features {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .featureA {
+    position: relative;
+    grid-column: 1/5;
+    grid-row: 1/13;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drumStudent.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .border {
+    border: 5px solid $font-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .border h3 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+
+  .border p {
+    width: 90%;
+    font-weight: 400;
+  }
+
+  .featureB {
+    grid-column: 5/9;
+    grid-row: 1/13;
+    position: relative;
+    background: $secondary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .featureB .border {
+    border: 5px solid $primary-color;
+  }
+
+  .featureC {
+    grid-column: 9/13;
+    grid-row: 1/13;
+    position: relative;
+    background: grey;
+    background: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url('../../assets/drummer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact {
+    background: $primary-color;
+  }
+
+  .contact h2 {
+    font-family: $decorative !important;
+    text-align: center;
+    background: $primary-color;
+  }
+}

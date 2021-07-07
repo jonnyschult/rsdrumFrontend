@@ -1,0 +1,340 @@
+@import '../../variables.scss';
+
+body {
+  background: $primary-color !important;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+}
+.loadingMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  -moz-animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  animation: fadeIn 0.25s ease-in 0s 1 normal forwards;
+  padding-top: 10rem;
+  background: $primary-color;
+  color: $font-color;
+  min-height: calc(100vh - 60px);
+}
+
+.spinnerMain {
+  color: $secondary-color;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5,
+.wrapper h6 {
+  color: $font-color;
+  font-family: $decorative-lite;
+}
+
+.wrapper h1 {
+  font-size: 3em;
+  font-family: $decorative;
+}
+
+.wrapper h2 {
+  font-size: 2.5em;
+}
+
+.wrapper h3 {
+  font-size: 2em;
+}
+
+.wrapper h4 {
+  font-size: 1.5em;
+}
+
+.wrapper p {
+  font-size: 1.1em;
+  color: $font-color;
+  font-family: $standard;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.searchBar {
+  border: none;
+  background-color: #222222;
+  color: $font-color;
+  transition: ease-in-out 0.25s;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.searchBar:focus,
+.searchBar:invalid {
+  outline: none;
+  border-bottom: 1px solid $secondary-color;
+  box-shadow: none;
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tagItem {
+  margin: 1em;
+  font-family: $decorative-lite !important;
+  transition: ease-in-out 0.1s;
+}
+
+.tagItem:hover {
+  cursor: pointer;
+  -webkit-text-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  text-shadow: 4px 4px 2px rgb(0, 0, 0);
+}
+
+.tagsContainer .tagExpander {
+  font-size: 1.2em;
+  transition: ease-in-out 0.15s;
+}
+
+.tagExpander:hover {
+  cursor: pointer;
+  -webkit-text-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.8);
+  text-shadow: 4px 4px 2px rgb(7, 7, 7);
+}
+
+.searchTags hr {
+  border-bottom: 1px solid $secondary-color;
+  width: 90%;
+}
+
+.videos h4 {
+  margin: 1em;
+}
+
+@include media('<small') {
+  .searchBarContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBar {
+    width: 90%;
+    height: 2em;
+    padding: 1.5em;
+  }
+
+  .searchTags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+    height: 4em;
+  }
+
+  .tagItem {
+    text-align: center;
+  }
+
+  .videosLayout h4 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+}
+
+@include media('>=small', '<medium') {
+  .searchBarContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBar {
+    width: 90%;
+    height: 2em;
+    padding: 1.5em;
+  }
+
+  .searchTags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+    height: 4em;
+  }
+
+  .tagItem {
+    text-align: center;
+  }
+
+  .videosLayout h4 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+}
+
+@include media('>=medium', '<large') {
+  .searchBarContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBar {
+    width: 90%;
+    height: 2em;
+    padding: 1.5em;
+  }
+
+  .searchTags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+    height: 4em;
+  }
+
+  .tagItem {
+    text-align: center;
+  }
+
+  .videosLayout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .videoComponentContainer {
+    width: 45%;
+    margin: 1em;
+    height: auto;
+  }
+
+  .videosLayout h4 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+}
+
+@include media('>large') {
+  .heading {
+    margin-top: 0;
+    font-size: 3.5em !important;
+  }
+  .searchBarContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchBar {
+    width: 50%;
+    height: 2em;
+    padding: 1.5em;
+  }
+
+  .searchTags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+    height: 4em;
+    width: 60%;
+  }
+
+  .tagItem {
+    text-align: center;
+  }
+
+  .videosLayout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .videoComponentContainer {
+    width: 30%;
+    margin: 1em;
+    margin-bottom: 3em;
+    height: auto;
+  }
+
+  .videosLayout h4 {
+    font-family: $decorative-lite;
+    text-align: center;
+  }
+}
