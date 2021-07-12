@@ -5,10 +5,10 @@ switch (window.location.hostname) {
     APIURL = 'http://localhost:4040';
     break;
   case 'ridgestreetstudios.com':
-    APIURL = 'http://rsdrumbackend-env.eba-3aa4vtmm.us-east-2.elasticbeanstalk.com/';
+    APIURL = 'https://api.rsdrum.com';
     break;
   default:
-    APIURL = 'http://rsdrumbackend-env.eba-3aa4vtmm.us-east-2.elasticbeanstalk.com/';
+    APIURL = 'https://api.rsdrum.com';
 }
 
 export default APIURL;
