@@ -3,7 +3,7 @@ import classes from './VideoContainer.module.scss';
 import VideoEditor from './VideoEditor';
 import { UserInfo, Video } from '../../models';
 import { Spiral as Hamburger } from 'hamburger-react';
-import {expander} from '../../utilities';
+import { expander } from '../../utilities';
 import { Spinner } from 'reactstrap';
 
 interface VideoContainerProps {
@@ -39,6 +39,7 @@ const VideoContainer: React.FC<VideoContainerProps> = (props) => {
 
   useEffect(() => {
     resizeHandler();
+    console.log(props.userInfo);
   }, [resizeHandler, props.video.tags]);
 
   return (
