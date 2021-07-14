@@ -39,7 +39,6 @@ const VideoContainer: React.FC<VideoContainerProps> = (props) => {
 
   useEffect(() => {
     resizeHandler();
-    console.log(props.userInfo);
   }, [resizeHandler, props.video.tags]);
 
   return (

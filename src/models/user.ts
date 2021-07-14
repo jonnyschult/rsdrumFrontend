@@ -7,7 +7,7 @@ export class User {
     public admin: boolean,
     public firstName: string,
     public lastName: string,
-    public createdAt: number,
+    public createdAt?: number,
     public password?: string,
     public id?: string
   ) {}

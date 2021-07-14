@@ -46,7 +46,6 @@ const Register: React.FC<RegisterProps> = (props) => {
           admin: false,
           student: true,
           active: true,
-          createdAt: Date.now(),
         };
         const data = await poster('notoken', 'users/register', info);
         await props.loginHandler(data.token);
