@@ -32,6 +32,7 @@ const LessonInfo: React.FC<LessonProps> = (props) => {
     comments: [],
   });
 
+  //updates current lesson displayed and the lessons array when assignment is updated.
   const lessonsSetter = (updatedLesson: Lesson) => {
     setLesson(updatedLesson);
     const updatedLessons = props.lessons.map((lessonItem) => {

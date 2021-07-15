@@ -51,8 +51,8 @@ const LessonUpdater: React.FC<LessonProps> = (props) => {
     try {
       const data = await updater(token, `lessons/updateLesson`, info, `${props.lesson.id}`);
       setResponse(data.message);
-      props.lessonsSetter(data.updatedLesson);
       setTimeout(() => {
+        props.lessonsSetter(data.updatedLesson);
         setResponse('');
         setProgress(0);
         toggle();
