@@ -6,6 +6,7 @@ import LessonEditor from './LessonEditor';
 import AdminComments from './AdminComments';
 import Comments from '../lessons/Comments';
 import { UserInfo, Lesson } from '../../models';
+import { convertCompilerOptionsFromJson } from 'typescript';
 
 interface LessonProps {
   userInfo: UserInfo;
@@ -50,6 +51,7 @@ const LessonInfo: React.FC<LessonProps> = (props) => {
     if (props.lessons.length > 0) {
       setLesson(props.lessons.filter((lesson) => lesson.id === params.id)[0]);
     }
+    console.log(lesson, props.lessons);
   }, [props.lessons, params.id]);
 
   return (

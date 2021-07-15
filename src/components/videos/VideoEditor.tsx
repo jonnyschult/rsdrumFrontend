@@ -3,7 +3,7 @@ import classes from './VideoEditor.module.scss';
 import VideoUpdater from './VideoUpdater';
 import { UserInfo, Video } from '../../models';
 import { Modal, Spinner } from 'reactstrap';
-import { deleter, expander } from '../../utilities'
+import { deleter, expander } from '../../utilities';
 
 interface VideoEditorProps {
   userInfo: UserInfo;
@@ -76,7 +76,7 @@ const VideoEditor: React.FC<VideoEditorProps> = (props) => {
   return (
     <div className={classes.wrapper}>
       <button className={classes.modalToggler} onClick={toggle}>
-        &#128393;
+        &#x270E;
       </button>
       <Modal isOpen={modal} toggle={toggle} className={classes.modal} contentClassName={classes.modalContent}>
         <p className={classes.exit} onClick={toggle}>

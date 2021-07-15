@@ -106,7 +106,7 @@ const LessonEditor: React.FC<LessonEditorProps> = (props) => {
     return (
       <div className={classes.wrapper}>
         <button className={classes.modalToggler} onClick={toggle}>
-          &#128393;
+          &#x270E;
         </button>
         <Modal
           isOpen={modal}

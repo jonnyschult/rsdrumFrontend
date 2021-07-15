@@ -68,7 +68,6 @@ const App: React.FC = () => {
     let userData = await userDataFetcher(userToken);
     if (userData.user.admin) {
       const lessonsData = await getter(userData.token, 'lessons/getLessons');
-      console.log('HERE');
       setLessons(
         lessonsData.lessons.sort((lessonA: Lesson, lessonB: Lesson) => {
           return lessonA.lessonNumber - lessonB.lessonNumber;

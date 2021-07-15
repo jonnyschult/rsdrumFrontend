@@ -67,7 +67,7 @@ const AssignmentEditor: React.FC<AssignmentEditorProps> = (props) => {
   return (
     <div>
       <button className={classes.modalToggler} onClick={toggle}>
-        &#128393;
+        &#x270E;
       </button>
       <Modal isOpen={modal} toggle={toggle} className={classes.modal} contentClassName={classes.modalContent}>
         <p className={classes.exit} onClick={toggle}>
