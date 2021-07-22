@@ -75,9 +75,8 @@ const LessonInfo: React.FC<LessonProps> = (props) => {
       </section>
       {props.userInfo.user.admin ? (
         <section className={classes.adminContainer}>
-          <LessonEditor userInfo={props.userInfo} lesson={lesson} lessonsSetter={lessonsSetter} />
-
           <AdminComments userInfo={props.userInfo} lesson={lesson} lessonsSetter={lessonsSetter} />
+          <LessonEditor userInfo={props.userInfo} lesson={lesson} lessonsSetter={lessonsSetter} />
         </section>
       ) : (
         <div className={classes.comments}>
