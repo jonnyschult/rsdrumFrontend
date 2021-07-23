@@ -6,7 +6,6 @@ import LessonEditor from './LessonEditor';
 import AdminComments from './AdminComments';
 import Comments from '../lessons/Comments';
 import { UserInfo, Lesson } from '../../models';
-import { convertCompilerOptionsFromJson } from 'typescript';
 
 interface LessonProps {
   userInfo: UserInfo;

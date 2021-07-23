@@ -40,7 +40,8 @@ const Home: React.FC<HomeProps> = (props) => {
           <h2>Your Teacher</h2>
           <p>
             Bob Schult is an passionate drummer with over 40 years experience. He has drummed for the LaPorte
-            Theater production of THE NAME OF THE PLAY and jammed out with local musicians such as Jim St.
+            Theater productions of <i>It's a Wonderful Life</i> and{' '}
+            <i>The Best Little Whore House in Texas</i> and jammed out with local musicians such as Jim St.
             James. He is an enthusiastic disciple of drumming and percussion and loves to pass the passion for
             excellence in music on to the next generation of drummers.
           </p>
