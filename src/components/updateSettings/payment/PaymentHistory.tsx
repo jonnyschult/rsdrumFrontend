@@ -4,7 +4,7 @@ import ErrorPage from '../../ErrorPage/ErrorPage';
 import ReceiptPage from './ReceiptPage';
 import { UserInfo, Payment } from '../../../models';
 import { Spinner } from 'reactstrap';
-import {getter} from '../../../utilities';
+import { getter } from '../../../utilities';
 
 interface PaymentHistoryProps {
   userInfo: UserInfo;
@@ -38,7 +38,7 @@ const PaymentHistory: React.FC<PaymentHistoryProps> = (props) => {
           setNumOfPackage(quantityMapped.reduce((total: number, addend: number) => (total += addend)));
           setIsError(false);
         }
-      } catch (error) {
+      } catch (error: any) {
         setIsError(true);
         if (
           error.response !== undefined &&

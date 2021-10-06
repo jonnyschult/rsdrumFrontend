@@ -45,7 +45,7 @@ const Contact: React.FC = (props) => {
         inputRefs.current.forEach((el) => (el.value = ''));
         setResponse('');
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

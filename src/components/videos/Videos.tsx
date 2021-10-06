@@ -5,7 +5,7 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import { UserInfo, Video } from '../../models';
 import { Spinner } from 'reactstrap';
 import classes from './Videos.module.scss';
-import {getter, expander} from '../../utilities'
+import { getter, expander } from '../../utilities';
 
 interface VideosProps {
   userInfo: UserInfo;
@@ -47,7 +47,7 @@ const Videos: React.FC<VideosProps> = (props) => {
       setSearchTags(sortedTags);
       setAllVideos(videosData.videos);
       setCurrentVideos(videosData.videos.filter((video: Video) => video.tags!.includes('home')));
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setIsError(true);
       if (

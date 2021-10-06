@@ -34,7 +34,7 @@ const updater: (token: string, endPoint: string, info: Info, id?: string) => Pro
       },
     });
     return results.data;
-  } catch (error) {
+  } catch (error: any) {
     throw error;
   }
 };

@@ -16,7 +16,7 @@ const deleter: (token: string, endPoint: string, query?: string) => Promise<any>
       },
     });
     return results.data;
-  } catch (error) {
+  } catch (error: any) {
     throw error;
   }
 };

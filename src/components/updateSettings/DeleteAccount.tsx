@@ -38,7 +38,7 @@ const UpdatePassword: React.FC<UpdatePasswordProps> = (props) => {
           setResponse('');
           history.push('/home');
         }, 1500);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&

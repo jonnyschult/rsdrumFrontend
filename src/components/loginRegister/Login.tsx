@@ -32,7 +32,7 @@ const Login: React.FC<LoginProps> = (props) => {
         setResponse('');
         props.toggle();
       }, 1500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

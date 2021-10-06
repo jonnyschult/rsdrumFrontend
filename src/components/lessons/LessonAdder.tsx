@@ -63,10 +63,10 @@ const LessonAdder: React.FC<LessonProps> = (props) => {
         setResponse('');
         toggle();
       }, 2500);
-    } catch (err) {
-      console.log(err);
-      if (err.response !== undefined) {
-        setError(err.response.data.message);
+    } catch (error: any) {
+      console.log(error);
+      if (error.response !== undefined) {
+        setError(error.response.data.message);
       } else {
         setError('Propblem fetching your data. Please let site admin Know.');
       }
@@ -117,7 +117,7 @@ const LessonAdder: React.FC<LessonProps> = (props) => {
             });
         }
       );
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

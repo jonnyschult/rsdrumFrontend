@@ -18,7 +18,7 @@ const getter: (
       },
     });
     return result.data;
-  } catch (error) {
+  } catch (error: any) {
     throw error;
   }
 };

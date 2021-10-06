@@ -67,7 +67,7 @@ const AssignmentAdder: React.FC<AssignmentAdderProps> = (props) => {
         setAuxProgress(0);
         toggle();
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       if (
         error.response !== undefined &&
         error.response.data !== undefined &&
@@ -140,7 +140,7 @@ const AssignmentAdder: React.FC<AssignmentAdderProps> = (props) => {
             });
         }
       );
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

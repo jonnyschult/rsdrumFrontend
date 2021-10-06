@@ -58,7 +58,7 @@ const Package: React.FC<PackageProps> = (props) => {
       setTimeout(() => {
         setResponse('');
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -96,7 +96,7 @@ const Package: React.FC<PackageProps> = (props) => {
           props.packages.filter((packageOption) => packageOption.id! !== result.deletedPackage.id)
         );
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

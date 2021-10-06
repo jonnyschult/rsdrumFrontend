@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './Home.module.scss';
 import { UserInfo } from '../../models';
-import poster from '../../assets/snareDrum.jpg';
 import ContactForm from '../contact/ContactForm';
 
 interface HomeProps {
@@ -10,7 +9,6 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = (props) => {
-  // const videoRef = useRef<HTMLVideoElement | null>(null);
   const [large, setLarge] = useState<boolean>(false);
 
   const resizeHandler = () => {
@@ -22,9 +20,6 @@ const Home: React.FC<HomeProps> = (props) => {
   window.addEventListener('resize', resizeHandler);
 
   useEffect(() => {
-    // if (videoRef) {
-    //   videoRef.current!.playbackRate = 0.5;
-    // }
     if (window.innerWidth > 1200) {
       setLarge(true);
     }

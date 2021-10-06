@@ -51,7 +51,7 @@ const LessonInfo: React.FC<LessonProps> = (props) => {
       setLesson(props.lessons.filter((lesson) => lesson.id === params.id)[0]);
     }
     console.log(lesson, props.lessons);
-  }, [props.lessons, params.id]);
+  }, [props.lessons, params.id, lesson]);
 
   return (
     <div className={classes.wrapper}>

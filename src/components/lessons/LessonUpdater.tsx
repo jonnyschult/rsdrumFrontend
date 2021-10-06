@@ -57,7 +57,7 @@ const LessonUpdater: React.FC<LessonProps> = (props) => {
         setProgress(0);
         toggle();
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -115,7 +115,7 @@ const LessonUpdater: React.FC<LessonProps> = (props) => {
             });
         }
       );
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

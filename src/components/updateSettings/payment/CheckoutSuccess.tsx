@@ -31,7 +31,7 @@ const CheckoutSuccess: React.FC<CheckoutSuccessProps> = (props) => {
         setReceipt(data.receipts[0]);
         setLoadingMain(false);
         setIsError(false);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         setIsError(true);
         if (

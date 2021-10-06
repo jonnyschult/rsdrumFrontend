@@ -35,7 +35,7 @@ const AssignLesson: React.FC<AssignLessonProps> = (props) => {
       const data = await updater(token, 'lessons/addStudent', info, `${props.lesson.id}`);
       props.lesson.students = data.updatedStudents;
       props.lessonsSetter(props.lesson);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -82,7 +82,7 @@ const AssignLesson: React.FC<AssignLessonProps> = (props) => {
       const data = await updater(token, 'lessons/removeStudent', { id: studentId }, `${props.lesson.id}`);
       props.lesson.students = data.updatedStudents;
       props.lessonsSetter(props.lesson);
-    } catch (error) {
+    } catch (error: any) {
       if (
         error.response !== undefined &&
         error.response.data !== undefined &&

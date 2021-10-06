@@ -4,7 +4,6 @@ import { UserInfo } from '../../models';
 import { Spinner } from 'reactstrap';
 import { updater, expander, dynamicPropertyRemover } from '../../utilities';
 
-
 interface UpdateInfoProps {
   userInfo: UserInfo;
   setUserInfo: React.Dispatch<React.SetStateAction<UserInfo>>;
@@ -45,7 +44,7 @@ const UpdateInfo: React.FC<UpdateInfoProps> = (props) => {
       setTimeout(() => {
         setResponse('');
       }, 2400);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

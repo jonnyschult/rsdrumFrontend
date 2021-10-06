@@ -9,7 +9,7 @@ import { Spinner } from 'reactstrap';
 import { getter, deleter, expander } from '../../utilities';
 
 interface AssignmentEditorProps {
-  userInfo: UserInfo; 
+  userInfo: UserInfo;
 }
 
 const AssignmentEditor: React.FC<AssignmentEditorProps> = (props) => {
@@ -31,7 +31,7 @@ const AssignmentEditor: React.FC<AssignmentEditorProps> = (props) => {
       const packageData = await getter(token, 'payments/getPackages');
       setPackages(packageData.packages);
       setLoadingMain(false);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setIsError(true);
       if (
@@ -75,7 +75,7 @@ const AssignmentEditor: React.FC<AssignmentEditorProps> = (props) => {
           setResponse('');
           loadUpHandler();
         }, 2500);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&

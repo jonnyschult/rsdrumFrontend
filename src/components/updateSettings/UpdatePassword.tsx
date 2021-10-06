@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import classes from './UpdatePassword.module.scss';
 import { UserInfo } from '../../models';
 import { Spinner } from 'reactstrap';
-import { updater, expander } from '../../utilities'
+import { updater, expander } from '../../utilities';
 
 interface UpdatePasswordProps {
   userInfo: UserInfo;
@@ -38,7 +38,7 @@ const UpdatePassword: React.FC<UpdatePasswordProps> = (props) => {
           inputRefs.current.forEach((el) => (el.value = ''));
           setResponse('');
         }, 2500);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&

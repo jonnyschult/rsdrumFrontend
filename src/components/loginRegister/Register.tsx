@@ -57,8 +57,8 @@ const Register: React.FC<RegisterProps> = (props) => {
           props.toggle();
         }, 2500);
       }
-    } catch (error) {
-      console.log(error.response);
+    } catch (error: any) {
+      console.log(error);
       if (
         error.response !== undefined &&
         error.response.data !== undefined &&

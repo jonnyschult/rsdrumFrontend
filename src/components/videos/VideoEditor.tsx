@@ -49,7 +49,7 @@ const VideoEditor: React.FC<VideoEditorProps> = (props) => {
           toggle();
         }, 500);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

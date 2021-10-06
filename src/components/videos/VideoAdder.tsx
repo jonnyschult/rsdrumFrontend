@@ -2,7 +2,7 @@ import React, { useState, FormEvent, useRef } from 'react';
 import classes from './VideoAdder.module.scss';
 import { UserInfo, Video } from '../../models';
 import { Spinner, Modal } from 'reactstrap';
-import {poster, expander} from '../../utilities'
+import { poster, expander } from '../../utilities';
 
 interface VideoAddProps {
   userInfo: UserInfo;
@@ -68,7 +68,7 @@ const VideoAdder: React.FC<VideoAddProps> = (props) => {
         inputRefs.current.forEach((el) => (el.value = ''));
         toggle();
       }, 1200);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

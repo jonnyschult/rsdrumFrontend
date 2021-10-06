@@ -34,7 +34,7 @@ const poster: (token: string, endPoint: string, info: Info, id?: string) => Prom
       },
     });
     return results.data;
-  } catch (error) {
+  } catch (error: any) {
     throw error;
   }
 };

@@ -77,7 +77,7 @@ const Checkout: React.FC<CheckoutProps> = (props) => {
       setChargeAmount(data.paymentIntent.amount);
       const packageData = await getter(token, 'payments/getPackages', `id=${params.packageId}`);
       setSelectedPackage(packageData.packages[0]);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setIsError(true);
       if (
@@ -139,7 +139,7 @@ const Checkout: React.FC<CheckoutProps> = (props) => {
       };
       const data = await poster(token, 'payments/savePayment', info);
       history.push(`/success/${data.receipt.id}`);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

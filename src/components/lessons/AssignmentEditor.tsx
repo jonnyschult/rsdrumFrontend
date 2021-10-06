@@ -39,7 +39,7 @@ const AssignmentEditor: React.FC<AssignmentEditorProps> = (props) => {
           props.lessonsSetter(props.lesson);
         }, 2500);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

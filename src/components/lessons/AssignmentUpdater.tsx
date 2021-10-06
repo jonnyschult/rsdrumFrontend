@@ -64,7 +64,7 @@ const AssignmentUpdater: React.FC<AssignmentUpdaterProps> = (props) => {
         setProgress(0);
         toggle();
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -137,7 +137,7 @@ const AssignmentUpdater: React.FC<AssignmentUpdaterProps> = (props) => {
             });
         }
       );
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setError('Problem uploading you image. Try again in a few minutes.');
       if (responseDivRef.current !== null) {

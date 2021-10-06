@@ -2,7 +2,7 @@ import React, { useState, useRef, FormEvent } from 'react';
 import classes from './VideoUpdater.module.scss';
 import { UserInfo, Video } from '../../models';
 import { Spinner } from 'reactstrap';
-import { updater, expander, dynamicPropertyRemover} from '../../utilities'
+import { updater, expander, dynamicPropertyRemover } from '../../utilities';
 
 interface VideoProps {
   userInfo: UserInfo;
@@ -78,7 +78,7 @@ const VideoUpdater: React.FC<VideoProps> = (props) => {
         );
         setResponse('');
       }, 2400);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

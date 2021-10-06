@@ -40,7 +40,7 @@ const CreatePackage: React.FC<CreatePackageProps> = (props) => {
         setResponse('');
         inputRefs.current.forEach((el) => (el.value = ''));
       }, 2500);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&

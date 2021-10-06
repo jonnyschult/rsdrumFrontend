@@ -45,7 +45,7 @@ const LessonEditor: React.FC<LessonEditorProps> = (props) => {
           history.push('/lessons');
           toggle();
         }, 2500);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&
@@ -75,7 +75,7 @@ const LessonEditor: React.FC<LessonEditorProps> = (props) => {
       try {
         const studentsData = await getter(token, 'users/getAllUsers', 'student=true');
         setAllStudents(studentsData.users);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         setIsError(true);
         if (

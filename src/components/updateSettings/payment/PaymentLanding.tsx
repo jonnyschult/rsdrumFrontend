@@ -5,7 +5,7 @@ import ErrorPage from '../../ErrorPage/ErrorPage';
 import { PackageOption, UserInfo } from '../../../models';
 import { useHistory } from 'react-router-dom';
 import { Spinner } from 'reactstrap';
-import {getter} from '../../../utilities';
+import { getter } from '../../../utilities';
 
 interface PaymentLandingProps {
   userInfo: UserInfo;
@@ -25,7 +25,7 @@ const PaymentLanding: React.FC<PaymentLandingProps> = (props) => {
     try {
       const packagesData = await getter(token, 'payments/getPackages');
       setPackages(packagesData.packages);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setIsError(true);
       if (

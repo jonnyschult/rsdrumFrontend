@@ -49,7 +49,7 @@ const Comments: React.FC<CommentProps> = (props) => {
       props.lesson.comments = data.updatedComments;
       props.lessonsSetter(props.lesson);
       inputRef.current!.value = '';
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -85,7 +85,7 @@ const Comments: React.FC<CommentProps> = (props) => {
         props.lesson.comments = data.updatedComments;
         props.lessonsSetter(props.lesson);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       if (
         error.response !== undefined &&
@@ -118,7 +118,7 @@ const Comments: React.FC<CommentProps> = (props) => {
         const data = await updater(token, 'lessons/updateComment', info, `${props.lesson.id}`);
         props.lesson.comments = data.updatedComments;
         props.lessonsSetter(props.lesson);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&

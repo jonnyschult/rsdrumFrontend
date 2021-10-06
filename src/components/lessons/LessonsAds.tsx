@@ -14,7 +14,7 @@ const LessonsAds: React.FC = () => {
       try {
         const packagesData = await getter('token', 'payments/getPackages');
         setPackages(packagesData.packages);
-      } catch (error) {
+      } catch (error: any) {
         console.log(error);
         if (
           error.response !== undefined &&
